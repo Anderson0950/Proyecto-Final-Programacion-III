@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Zone - Formulario de Contacto</title>
+    <link href="Icnn.jpg" rel="shortcut Icon" />
+    <link href="Estiloscontacto.Css" rel="stylesheet" />
+
+</head>
+
+<form id="contact-form" method="post" action="insertar.php"></form>
+
+<body>
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="ImgGamingZone.jpg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Principal</a></li>
+            <li><a href="Catalogo.html">Catálogo de los videos juegos</a></li>
+            <li><a href="Contacto.html">Formulario de Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <h1>Contacto</h1>
+        <form id="contact-form" method="post" action="enviar.php">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="juego">Juego:</label>
+                <select id="juego" name="juego" required>
+                    <option value="">Selecciona un juego</option>
+                    <option value="Grand Theft Auto V">Grand Theft Auto V</option>
+                    <option value="Rust">Rust</option>
+                    <option value="God of War Ragnarök">God of War Ragnarök</option>
+                    <option value="Mortal Kombat 11">Mortal Kombat 11</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - Gaming Zone.</p>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const juegoSelect = document.getElementById('juego');
+
+        // Validar formulario
+        contactForm.addEventListener('submit', function (event) {
+            if (!contactForm.checkValidity()) {
+                event.preventDefault();
+                // Mostrar mensajes de error
+                contactForm.reportValidity();
+            }
+        });
+
+        // Cambiar estilo de select
+        juegoSelect.addEventListener('change', function () {
+            if (juegoSelect.value !== '') {
+                juegoSelect.classList.remove('invalid');
+            } else {
+                juegoSelect.classList.add('invalid');
+            }
+        });
+    </script>
+</body>
+
+</html>

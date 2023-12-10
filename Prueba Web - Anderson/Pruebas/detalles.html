@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Zone - Detalles del producto</title>
+    <link href="Icnn.jpg" rel="shortcut Icon" />
+    <link href="Estilosdetalles.Css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="ImgGamingZone.jpg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Principal</a></li>
+            <li><a href="Catalogo.html">Catálogo de los videos juegos</a></li>
+            <li><a href="Contacto.html">Formulario de Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <h1>Detalles del producto</h1>
+        <div class="product-details">
+            <img src="Img/Productos/producto1.jpg" alt="Producto 1" id="product-image">
+            <h2 id="product-name">Producto 1</h2>
+            <p id="product-price">Precio: $30</p>
+            <p id="product-description">Descripción: Este es un producto delicioso y fácil de preparar. ¡No te lo pierdas!</p>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - Gaming Zone.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const productDetails = document.querySelector('.product-details');
+        const productImage = document.querySelector('#product-image');
+
+        if (productId) {
+
+            if (productId === '1') {
+                productImage.src = 'ImgGta.jpg';
+                productDetails.querySelector('#product-name').textContent = 'Grand Theft Auto V ';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $30';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: es un videojuego de acción-aventura de mundo abierto en tercera persona desarrollado por el estudio escocés Rockstar North y distribuido por Rockstar Games.';
+            } else if (productId === '2') {
+                productImage.src = 'ImgRust.jpg';
+                productDetails.querySelector('#product-name').textContent = 'Rust';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $40';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: es un juego de supervivencia creado por Facepunch Studios. La inspiración del videojuego viene de múltiples juegos del género de supervivencia.';
+            } else if (productId === '3') {
+                productImage.src = 'ImgKratos.jpg';
+                productDetails.querySelector('#product-name').textContent = 'God of War Ragnarök';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $35';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: es un videojuego de acción y aventuras en tercera persona desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment.';
+            } else if (productId === '4') {
+                productImage.src = 'ImgMortal.jpg';
+                productDetails.querySelector('#product-name').textContent = 'Mortal Kombat 11';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $50';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: es un videojuego de lucha desarrollado por NetherRealm Studios y publicado por Warner Bros. Interactive Entertainment.';
+            }
+        }
+    </script>
+</body>
+
+</html>
+

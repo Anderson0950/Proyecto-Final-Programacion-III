@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming zone - Principal </title>
+    <link href="Icnn.jpg" rel="shortcut Icon" />
+    <link href="Estilos.css" rel="stylesheet" />
+</head>
+
+<body class="Index">
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="ImgGamingZone.jpg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Principal</a></li>
+            <li><a href="Catalogo.html">Catálogo de los videos juegos</a></li>
+            <li><a href="Contacto.html">Formulario de Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <div id="slider-container">
+            <div id="slider">
+                <div class="slide">
+                    <h1>Bienvenido a Gaming Zone</h1>
+                    <p>Explora nuestro increíble mundo de juegos y sumérgete en emocionantes aventuras y desafíos.</p>
+                    <a href="Catalogo.html" class="btn">Ver catálogo</a>
+                </div>
+                <div class="slide">
+                    <h1>¡Descubre nuestras ofertas especiales!</h1>
+                    <p>Contamos con descuentos exclusivos en una amplia variedad de productos y accesorios para gamers.</p>
+                    <a href="Catalogo.html" class="btn">Explorar ofertas</a>
+                </div>
+                <div class="slide">
+                    <h1>Expande tu colección de juegos</h1>
+                    <p>Encuentra los últimos lanzamientos y los clásicos favoritos en nuestra tienda de juegos.</p>
+                    <a href="Catalogo.html" class="btn">Ver juegos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ContentBox">
+            <div class="Box">
+                <img src="ImgGta.jpg" alt="Imagen 1">
+                <h3>Grand Theft Auto V</h3>
+                <p>Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto en tercera persona desarrollado por el estudio escocés Rockstar North y distribuido por Rockstar Games.</p>
+                <a href="Detalles.html?id=1"> Ver más</a>
+            </div>
+            <div class="Box">
+                <img src="ImgRust.jpg" alt="Imagen 2">
+                <h3>Rust </h3>
+                <p>Rust es un juego de supervivencia creado por Facepunch Studios. La inspiración del videojuego viene de múltiples juegos del género de supervivencia.</p>
+                <a href="Detalles.html?id=2"> Ver más</a>
+            </div>
+            <div class="Box">
+                <img src="ImgKratos.jpg" alt="Imagen 3">
+                <h3>God of War Ragnarök </h3>
+                <p>God of War Ragnarök es un videojuego de acción y aventuras en tercera persona desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment.</p>
+                <a href="Detalles.html?id=3"> Ver más</a>
+            </div>
+            <div class="Box">
+                <img src="ImgMortal.jpg" alt="Imagen 4">
+                <h3>Mortal Kombat 11</h3>
+                <p>Mortal Kombat 11 es un videojuego de lucha desarrollado por NetherRealm Studios y publicado por Warner Bros. Interactive Entertainment.</p>
+                <a href="Detalles.html?id=4"> Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - Gaming Zone.</p>
+    </footer>
+
+    <script> 
+                    // Deslizador de imágenes
+                    const slider = document.getElementById('slider');
+                    let slideIndex = 0;
+                    const slides = document.getElementsByClassName('slide');
+
+                    setInterval(() => {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+                    }, 5000);
+    </script>
+</body>
+
+</html>
